@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa</title>
+    <style>
+        /* Layout grid */
+        body {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            grid-template-columns: 1fr;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            height: 100px;
+        }
+
+        /* Container utama untuk layout kiri-kanan */
+        .container {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            height: 100%;
+        }
+
+        /* Sidebar kiri untuk daftar mahasiswa */
+        .sidebar {
+            background-color: #f4f4f4;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        /* Frame kanan untuk tampilan detail mahasiswa dalam iframe */
+        .content {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        /* Link daftar mahasiswa */
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        a:hover {
+            color: #4CAF50;
+        }
+
+        /* iframe styling */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header untuk logo universitas -->
+    <header>
+        <img src="LOGO POLIBANG.png"width="50px"alt>
+        <h2>Politeknik Balekambang</h2>
+    </header>
+
+    <!-- Container layout kiri-kanan -->
+    <div class="container">
+        <!-- Sidebar kiri untuk daftar nama mahasiswa -->
+        <div class="sidebar">
+            <h2>Daftar Mahasiswa</h2>
+            <ul>
+                <li><a href="detail_lidikri.html" target="detailFrame">M.Lidikri</a></li>
+                <li><a href="detail_akhyar.html" target="detailFrame">M.Akhyar Ruddin</a></li>
+                <li><a href="detail_ghani.html" target="detailFrame">Muhammad Ghani Abdillah</a></li>
+                <!-- Tambahkan nama mahasiswa lain sesuai kebutuhan -->
+            </ul>
+        </div>
+
+        <!-- Konten kanan untuk menampilkan detail mahasiswa dalam iframe -->
+        <div class="content">
+            <iframe name="detailFrame" src="default_detail.html"></iframe>
+        </div>
+    </div>
+</body>
+</html>
